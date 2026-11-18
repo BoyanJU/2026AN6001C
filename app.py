@@ -3,16 +3,16 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
-@app.route("/",method=["GET","POST"])
+@app.route("/",methods=["GET","POST"])
 def index():
   return(render_template("index.html"))
 
-@app.route("/main",method=["GET","POST"])
+@app.route("/main",methods=["GET","POST"])
 def main():
   q=request.form.get("q")
   return(render_template("main.html"))
 
-@app.route("/dbs",method=["GET","POST"])
+@app.route("/dbs",methods=["GET","POST"])
 def dbs():
   return(render_template("dbs.html"))
 
